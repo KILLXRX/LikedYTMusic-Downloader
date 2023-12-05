@@ -59,7 +59,8 @@ async function run_browser(browser, selectedProfile){
         headless: 'new',
         userDataDir: profilePath,
         args: args,
-        handleSIGINT: true
+        handleSIGINT: true,
+        slowMo: 500
       });
     return browser
 }
