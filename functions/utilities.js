@@ -48,3 +48,25 @@ function get_default_browser(){
     });
     return browser
 }
+
+async function run_browser(browser, selectedProfile){
+    //let selectedProfile ="Profile 1"
+    let profilePath = `${os.environ["SYSTEMDRIVE"]}\\Users\\${os.getenv("USERNAME") + browser["profilePath"] + selectedProfile}`
+    let args = []
+    args.push(`--profile-directory=${selectedProfile}`, `--user-data-dir=${profilePath}`, "--remote-debugging-port=9222", "--remote-allow-origins=*",)
+    const browser = await puppeteer.launch({
+        executablePath: browser.path,
+        headless: 'new',
+        userDataDir: profilePath,
+        args: args,
+        handleSIGINT: true
+      });
+    return browser
+}
+
+module.exports = {
+    run_browser,
+    get_default_browser,
+    getProgId,
+    find_browser
+}
