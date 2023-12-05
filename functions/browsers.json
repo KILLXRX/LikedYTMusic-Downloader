@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Chrome",
+        "fullname": "Google Chrome",
+        "process": {"win32": "chrome.exe"},
+        "profilePath": "\\AppData\\Local\\Google\\Chrome\\User Data\\",
+        "progid": "ChromeHTML"
+    },
+    {
+        "name": "Yandex",
+        "fullname": "Yandex Browser",
+        "process": {"win32": "browser.exe"},
+        "profilePath": "\\AppData\\Local\\Yandex\\YandexBrowser\\User Data\\",
+        "progid": "YandexHTML"
+    },
+    {
+        "name": "Edge",
+        "fullname": "Microsoft Edge",
+        "process": {"win32": "msedge.exe"},
+        "profilePath": "\\AppData\\Local\\Microsoft\\Edge\\User Data\\",
+        "progid": "EdgeHTML"
+    },
+    {
+        "name": "Opera",
+        "fullname": "Opera",
+        "process": {"win32": "opera.exe"},
+        "profilePath": "\\AppData\\Roaming\\Opera Software\\Opera Stable\\",
+        "progid": "OperaHTML"
+    },
+    {
+        "name": "Opera GXStable",
+        "fullname": "Opera GX",
+        "process": {"win32": "opera.exe"},
+        "profilePath": "\\AppData\\Roaming\\Opera Software\\Opera GX Stable\\",
+        "progid": "OperaGXHTML"
+    },
+    {
+        "name": "OperaDev",
+        "fullname": "Opera Developer (Opera One)",
+        "process": {"win32": "opera.exe"},
+        "profilePath": "\\AppData\\Roaming\\Opera Software\\Opera Dev\\",
+        "progid": "Operadeveloper"
+    },
+    {
+        "name": "Vivaldi",
+        "fullname": "Vivaldi Browser",
+        "process": {"win32": "vivaldi.exe"},
+        "profilePath": "\\AppData\\Local\\Vivaldi\\User Data\\",
+        "progid": "VivaldiHTML"
+    },
+    {
+        "name": "Brave",
+        "fullname": "Brave Browser",
+        "process": {"win32": "brave.exe"},
+        "profilePath": "\\AppData\\Local\\BraveSoftware\\Brave-browser\\User Data\\",
+        "progid": "BraveHTML"
+    }
+]
