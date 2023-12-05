@@ -11,4 +11,18 @@ function find_browser(progid){
     return null
 }
 
-
+function getProgId(){
+    const key = new Registry({
+        hive: Registry.HKCU, // HKEY_CURRENT_USER
+        key: '\\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\http\UserChoice',
+    });
+    if(key == null){return null}
+    progid = key.get("ProgId", (err, item) => {
+        if (err) {
+          console.error(err);
+          return null
+        } else {
+          return item.value
+        }
+    });
+}
