@@ -26,3 +26,25 @@ function getProgId(){
         }
     });
 }
+
+function get_default_browser(){
+    const progid = getProgId()
+    let browser = (progid != null) ? find_browser(progid.split(".")[0]) : null
+    const key = (progid != null) ? new Registry({
+        hive: Registry.HKCR,
+        key: `\\${progid}`,
+    }) : null
+    if(progid == null){throw "Can't find default browser"}
+    if(browser == null){throw "Unsupported Browser!"}
+    if(key == null){throw "Can't find browser command"}
+    
+    browser["path"] = key.get("ApplicationIcon", (err, item) => {
+        if (err) {
+          console.error(err);
+          return null
+        } else {
+          return item.value.split(',')[0]
+        }
+    });
+    return browser
+}
